@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>Sarah Erni</title>
+  <title>Meine Homepage</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
+    header {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      padding: 20px;
+    }
     nav {
-      background: #333;
+      background: #000;
       padding: 10px;
       display: flex;
       gap: 20px;
+      justify-content: center;
     }
     nav a {
       color: white;
@@ -27,16 +34,26 @@
     }
     .content {
       padding: 20px;
+      min-height: 80vh;
     }
     .section {
       display: none;
+      padding: 20px;
+      border-radius: 10px;
     }
     .active {
       display: block;
     }
+    /* Hintergrundfarben je nach Seite */
+    #about.active { background-color: #fff8b3; } /* Gelb */
+    #hobbies.active { background-color: #ffd6d6; } /* Hellrot/Rosa */
+    #interests.active { background-color: #d6ffd6; } /* Hellgrün */
+    #job.active { background-color: #d6eaff; } /* Hellblau */
   </style>
 </head>
 <body>
+  <header>Sarah Erni</header>
+
   <nav>
     <a onclick="showSection('about')">Das bin ich</a>
     <a onclick="showSection('hobbies')">Hobbies</a>
@@ -46,12 +63,8 @@
 
   <div class="content">
     <div id="about" class="section active">
-  <h1>Sarah Erni</h1>
-  <h2>Das bin ich</h2>
-  <h3>Hallo, ich bin Sarah, Informaikerin i.A. und leidenschaftliche Handballtrainerin.</h3>
-  <h3>Ich arbeite als Informatikerin in der Belimed Life Science. Auch wenn nicht jeder Tag gleich erfolgreich ist, mag ich meine Arbeit dort. Ich liebe es an Projekten mitzuarbeiten.</h3>
-  <h3>Wenn ich nicht gerade auf der Arbeit oder in der Schule bin, findet man mich in der Handballhalle in Weinfelden. Nach meiner aktiven Karriere im Nachwuchs des HC Weinfelden und zuletzt beim HC Kreuzlingen habe ich vor knapp einem halben Jahr meine Trainerkarriere bei der U13 des HC Weinfelden begonnen. Ich mache Erfahrungen aus einer anderer Sicht als in den letzten Jahren. Trotzdem schliesse ich nicht aus, dass ich wieder beginne selbst aktiv Handball zu spielen.</h3>
-  <h3>Das war aber noch lange nicht alles, was es über mich zu wissen gibt. Um mehr von mir zu erfahren, kannst du dich gerne hier auf der Webseite umschauen.</h3>
+      <h1>Das bin ich</h1>
+      <p>Hallo, ich bin Sarah Erni. Hier steht dein aktueller Text über dich.</p>
     </div>
 
     <div id="hobbies" class="section">
