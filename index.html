@@ -2,15 +2,79 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Sarah Erni</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>Sarah Erni</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a onclick="showSection('about')">Das bin ich</a>
+    <a onclick="showSection('hobbies')">Hobbies</a>
+    <a onclick="showSection('interests')">Interessen</a>
+    <a onclick="showSection('job')">Beruf</a>
+  </nav>
+
+  <div class="content">
+    <div id="about" class="section active">
   <h1>Sarah Erni</h1>
   <h2>Das bin ich</h2>
   <h3>Hallo, ich bin Sarah, Informaikerin i.A. und leidenschaftliche Handballtrainerin.</h3>
   <h3>Ich arbeite als Informatikerin in der Belimed Life Science. Auch wenn nicht jeder Tag gleich erfolgreich ist, mag ich meine Arbeit dort. Ich liebe es an Projekten mitzuarbeiten.</h3>
   <h3>Wenn ich nicht gerade auf der Arbeit oder in der Schule bin, findet man mich in der Handballhalle in Weinfelden. Nach meiner aktiven Karriere im Nachwuchs des HC Weinfelden und zuletzt beim HC Kreuzlingen habe ich vor knapp einem halben Jahr meine Trainerkarriere bei der U13 des HC Weinfelden begonnen. Ich mache Erfahrungen aus einer anderer Sicht als in den letzten Jahren. Trotzdem schliesse ich nicht aus, dass ich wieder beginne selbst aktiv Handball zu spielen.</h3>
   <h3>Auf dieser Webseite stelle ich mich selbst ein wenig vor. Um mehr zu erfahren, kannst du dich gerne auf der Webseite hier umschauen.</h3>
+    </div>
+
+    <div id="hobbies" class="section">
+      <h1>Hobbies</h1>
+      <p>Hier kannst du später deine Hobbys eintragen.</p>
+    </div>
+
+    <div id="interests" class="section">
+      <h1>Interessen</h1>
+      <p>Hier kannst du später deine Interessen eintragen.</p>
+    </div>
+
+    <div id="job" class="section">
+      <h1>Beruf</h1>
+      <p>Hier kannst du später etwas zu deinem Beruf schreiben.</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
